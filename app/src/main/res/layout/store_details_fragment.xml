@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout">
+
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="240dp"
+            app:srcCompat="@mipmap/ic_launcher"
+            android:id="@+id/storeLogoImageView"
+            android:scaleType="centerInside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/contDesc"/>
+
+    <TextView
+            tools:text="Name of the store"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/storeNametextView"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/white"
+            android:lines="2"
+            android:textSize="20sp"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/background_gradient"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/storeLogoImageView"/>
+
+    <TextView
+            tools:text="7801 Citrus Park Town Center Mall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/addrTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/storeLogoImageView"
+            android:layout_marginTop="16dp"/>
+
+    <TextView
+            tools:text="Tampa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cityTextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/addrTextView"
+            app:layout_constraintStart_toStartOf="@+id/addrTextView"
+            />
+
+    <TextView
+            tools:text="33625"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/zipCodeTextView"
+            app:layout_constraintStart_toEndOf="@+id/cityTextView"
+            android:layout_marginStart="4dp"
+            app:layout_constraintTop_toTopOf="@+id/cityTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/cityTextView"
+            />
+
+    <TextView
+            tools:text="FL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/stateTextView"
+            app:layout_constraintStart_toEndOf="@+id/zipCodeTextView"
+            android:layout_marginStart="4dp"
+            app:layout_constraintTop_toTopOf="@+id/zipCodeTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/zipCodeTextView"
+            app:layout_constraintEnd_toEndOf="@+id/addrTextView"
+            />
+
+    <TextView
+            tools:text="813-926-7300"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/phonetextView"
+            app:layout_constraintStart_toStartOf="@+id/cityTextView"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/cityTextView"
+            app:layout_constraintEnd_toEndOf="@+id/stateTextView"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

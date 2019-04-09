@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/storesFragment">
+    <fragment
+            android:id="@+id/storesFragment"
+            android:name="com.ionnt.rocketpocket.ui.storeshome.StoresFragment"
+            android:label="StoresFragment">
+        <action
+                android:id="@+id/action_to_store_details"
+                app:destination="@id/storeDetailsFragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/storeDetailsFragment"
+            android:name="com.ionnt.rocketpocket.ui.storedetails.StoreDetailsFragment"
+            android:label="StoreDetailsFragment">
+        <argument
+                android:name="storeArg"
+                app:argType="com.ionnt.rocketpocket.data.model.Store"/>
+    </fragment>
+</navigation>

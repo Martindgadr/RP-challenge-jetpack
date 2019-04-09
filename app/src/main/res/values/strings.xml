@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Rocket Pocket Jetpack</string>
+    <string name="back">Back</string>
+    <string name="contDesc">Store\'s Logo</string>
+    <string name="connectionError">Network Connection error, please try again.</string>
+    <string name="server_error">Error in server request, please contact admin.</string>
+    <string name="noDataAvailable">No data available on the server.</string>
+</resources>
