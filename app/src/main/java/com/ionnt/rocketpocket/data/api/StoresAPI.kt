@@ -4,7 +4,7 @@ import com.ionnt.rocketpocket.data.dtos.StoresDto
 import kotlinx.coroutines.Deferred
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Headers
+import retrofit2.http.Header
 
 /**
  * Created by Martin De Girolamo on 05/04/2019.
@@ -16,9 +16,5 @@ interface StoresAPI {
     }
 
     @GET(STORES)
-    fun getAllStoresAsync() : Deferred<Response<StoresDto>>
-
-    @GET(STORES)
-    @Headers("Cache-Control: no-cache")
-    fun getAllStoresNoCacheAsync(): Deferred<Response<StoresDto>>
+    fun getAllStoresAsync(@Header("Cache-Control") cacheControl: String?): Deferred<Response<StoresDto>>
 }

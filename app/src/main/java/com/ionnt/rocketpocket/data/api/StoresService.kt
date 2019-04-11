@@ -18,9 +18,9 @@ class StoresService @Inject constructor(retrofit: Retrofit) {
     {
         try {
             val response: Response<StoresDto> = if (forceNetwork)
-                newsApi.getAllStoresNoCacheAsync().await()
+                newsApi.getAllStoresAsync("no-cache").await()
             else
-                newsApi.getAllStoresAsync().await()
+                newsApi.getAllStoresAsync(null).await()
 
             if (response.isSuccessful) {
                 response.body()?.let {
