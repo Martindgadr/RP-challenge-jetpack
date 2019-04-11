@@ -43,7 +43,7 @@ class StoresFragment: BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initAdapters()
-        loadStores()
+//        loadStores()
         storeSwipeRefresh.setOnRefreshListener { handleRefreshData() }
     }
 
